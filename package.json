@@ -1,0 +1,14 @@
+{
+  "name": "livro-de-contas",
+  "private": true,
+  "version": "0.1.0",
+  "engines": { "node": ">=24.14.0" },
+  "scripts": {
+    "setup": "npm ci --prefix Backend && npm ci --prefix Frontend",
+    "dev": "node --env-file-if-exists=.env scripts/dev.mjs",
+    "build": "npm run build --prefix Frontend",
+    "start": "node --env-file-if-exists=.env Backend/index.js",
+    "test": "npm test --prefix Backend",
+    "lint": "npm run lint --prefix Frontend"
+  }
+}
